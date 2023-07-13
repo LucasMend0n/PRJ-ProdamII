@@ -9,8 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<ClubeDbContext>(options => {
-
+builder.Services.AddDbContext<ClubeDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"),
+    assembly => assembly.MigrationsAssembly(typeof(ClubeDbContext).Assembly.FullName));
 });
 
 var app = builder.Build();
