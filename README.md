@@ -4,7 +4,7 @@ Projeto feito para o teste técnico para minha segunda tentativa de ingresso na 
 
 ## O teste
 
-O teste consiste numa prova téorica e uma situação problema a ser resolvida num teste prático que estão no arquivo `prova.pdf`
+O teste consiste numa prova téorica e um uma web api desenvolvida a partir da ideia de negócios escolhida das opções diposnibilizadas no arquivo: `prova.pdf`
 
 ## Stack utilizada
 
@@ -27,13 +27,13 @@ Após isso, altere a string de conexão no arquivo `appsetings.json` na propried
 ```json
   
   "ConnectionStrings": {
-    "Default": "INSIRA SUA STRING DE CONEXÃO"
+    "Default": "INSIRA SUA STRING DE CONEXÃO DO SQL SERVER"
   },
 
 ```
 Instale as dependências e inicie o projeto
 ```bash
-  dotnet run --watch
+  dotnet run
 ```
 
 Daí é só testar! 
