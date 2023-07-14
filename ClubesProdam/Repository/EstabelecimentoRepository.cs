@@ -16,7 +16,7 @@ namespace ClubesProdam.Repository
 
         public async Task<Estabelecimento> GetEstabelecimentoByIdAsync(int id)
         {
-            return await _context.Estabelecimentos.Include(e => e.Funcionarios).Where(x => x.Id == id).FirstOrDefaultAsync();
+            return await _context.Estabelecimentos.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<List<Estabelecimento>> GetEstabelecimentosAsync()
