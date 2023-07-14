@@ -18,6 +18,17 @@ builder.Services.AddDbContext<ClubeDbContext>(options =>
     assembly => assembly.MigrationsAssembly(typeof(ClubeDbContext).Assembly.FullName));
 });
 
+builder.Services.AddCors(options =>
+ {
+     options.AddPolicy("AllowAnyServer",
+         builder =>
+         {
+             builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+         });
+ });
+
 var app = builder.Build();
 
 
@@ -27,6 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowAnyServer");
 
 app.UseHttpsRedirection();
 
