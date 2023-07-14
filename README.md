@@ -1,12 +1,12 @@
 # PRJ-ProdamII
 
-Projeto feito para o teste técnico para minha segunda tentativa de ingresso na PRODAM-SP. O teste da primeira tentativa está anexado no documento da prova :) 
+Projeto feito para o teste técnico para minha segunda tentativa de ingresso na PRODAM-SP. O teste da primeira tentativa está anexado no documento da prova :)
 
 ## O teste
 
-O teste consiste numa prova téorica, uma web api desenvolvida a partir da ideia de negócios escolhida das opções diposnibilizadas no arquivo: `ProvaProdam.pdf` e um frontend bem básico para consumir a api. 
+O teste consiste numa prova téorica, uma web api desenvolvida a partir da ideia de negócios escolhida das opções diposnibilizadas no arquivo: `ProvaProdam.pdf` e um frontend bem básico para consumir a api.
 
->Lembrando que a api pode ser consumida somente com Swagger, caso não queira testar com o frontend!
+> Lembrando que a api pode ser consumida somente com Swagger, caso não queira testar com o frontend!
 
 ## Stack utilizada
 
@@ -15,8 +15,6 @@ O teste consiste numa prova téorica, uma web api desenvolvida a partir da ideia
 **Frontend:** Javascript, ReactJS
 
 **Banco de dados:** Microsoft SQL server
-
-
 
 ## Rodando localmente
 
@@ -28,16 +26,18 @@ Clone o projeto
 
 ### Backend
 
-Após isso, altere a string de conexão no arquivo `appsetings.json` na propriedade  `ConnectionStrings` para a string de conexão da sua instância local do SQL Server
+Após isso, altere a string de conexão no arquivo `appsetings.json` na propriedade `ConnectionStrings` para a string de conexão da sua instância local do SQL Server
 
 ```json
-  
+
   "ConnectionStrings": {
     "Default": "INSIRA SUA STRING DE CONEXÃO DO SQL SERVER"
   },
 
 ```
+
 Instale as dependências e inicie o projeto
+
 ```bash
   dotnet run
 ```
@@ -48,7 +48,8 @@ Depois, vamos configurar o frontend
 
 acesse a pasta `frontend`
 
-Instale as dependências 
+Instale as dependências
+
 ```bash
   npm install
 ```
@@ -56,11 +57,35 @@ Instale as dependências
 configure a url de onde estiver rodando o backend no arquivo `api.js` para que ele econtre e possa fazer as requisições para o servidor certo!
 
 Execute a aplicação web em modo dev
+
 ```bash
   npm run dev
 ```
 
-Daí é só testar! 
+Daí é só testar!
+
+### Exemplos de payload
+
+- POST
+
+```json
+{
+  "nomeEmpresa": "TESTE NOME FANTASIA",
+  "cep": "09505332",
+  "cnpj": "44444444444444",
+  "tipoEstabelecimento": "TESTE TIPO CLUBE"
+}
+```
+
+- PUT (passando ID pela rota no swagger)
+
+```json
+{
+  "nomeEmpresa": "TESTE NOME LEGAL",
+  "tipoEstabelecimento": "TESTE TIPO CLUBE"
+}
+```
+
 
 
 
