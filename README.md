@@ -4,7 +4,7 @@ Projeto feito para o teste técnico para minha segunda tentativa de ingresso na 
 
 ## O teste
 
-O teste consiste numa prova téorica, uma web api desenvolvida a partir da ideia de negócios escolhida das opções diposnibilizadas no arquivo: `prova.pdf` e um frontend bem básico para consumir a api. 
+O teste consiste numa prova téorica, uma web api desenvolvida a partir da ideia de negócios escolhida das opções diposnibilizadas no arquivo: `ProvaProdam.pdf` e um frontend bem básico para consumir a api. 
 
 >Lembrando que a api pode ser consumida somente com Swagger, caso não queira testar com o frontend!
 
